@@ -3,23 +3,25 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title><%= message %></title>
+    <title></title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <style>
     .selected{
         border: 2px blue solid;
         border-radius: 5px;
     }
+    img{
+      height: 200px;
+    }
 
 
 </style>
 <body>
-    <main>
-        <div class="row text-center">
-            <div class="card" style="width: 18rem;">
+    <main class="justify-content-center container">
+        <div class="row text-center container">
+            <div class="card" style="width: 18rem">
                 <img src="img/2000 Kubota micro tracteur kubota.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">2000 Kubota micro tracteur kubota</h5>
@@ -29,7 +31,7 @@
               <div class="card" style="width: 18rem;">
                 <img src="img/Honda.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Honda Jizz</h5>
+                  <h5 class="card-title">Honda Jaz</h5>
                   <a href="#" class="btn btn-primary">Kiválasztás</a>
                 </div>
               </div>
@@ -41,22 +43,31 @@
                 </div>
               </div>
         </div>
-        <form action="">
+        <form action="/rendeles" method="post" class="">
+          <div class="form-group">
             <label for="nev" class="">Név: </label><br>
-            <input type="text" name="nev" id=""><br>
-            <label for="cim">Számlázási cím</label><br>
-            <input type="text" name="szallitasiCim" id=""><br>
+            <input type="text" name="nev" id="" value="<%=data.nev%>"><br>
+            <label for="szamlazasi">Számlázási cím</label><br>
+            <input type="text" name="szamlazasi" id="" value="<%=data.szamlazasi%>"><br>
+            <label for="szallitasi">Számlázási cím</label><br>
+            <input type="text" name="szallitasi" id="" value="<%=data.szallitasi%>"><br>
             <label for="kuponkod">Kuponkód</label><br>
-            <input type="text" name="kuponkod" id=""><br>
-
+            <input type="text" name="kuponkod" id="" value="<%=data.kuponkod%>"><br>
+            <hr>
+          </div>
+          <div class="form-group">
             <p>Bankkártya adatok:</p>
-            <label for="kartyaszam">Kártyaszám:</label><br>
-            <input type="text" name="kartyaszam" id=""><br>
+            <label for="szam">Kártyaszám:</label><br>
+            <input type="text" name="szam" id="" value="<%=data.szam%>"><br>
             <label for="lejarat">Lejarati dátum</label><br>
-            <input type="text" name="" id=""><br>
+            <input type="text" name="lejarat" id="" value="<%=data.lejarat%>"><br>
             <label for="kod">Biztonsági kód</label><br>
-            <input type="text" name="kod" id=""><br>
-            
+            <input type="text" name="kod" id="" value="<%=data.kod%>"><br> 
+            <% for (let e of errors){%>
+              <p style="color: red;"><%= e %></p>
+          <%}%>
+            <input class="btn btn-primary" type="submit" value="Submit" id="">
+          </div>
         </form>
     </main>
     

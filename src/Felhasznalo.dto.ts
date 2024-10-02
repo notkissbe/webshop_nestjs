@@ -1,13 +1,10 @@
-export class Bankkartya{
-    szam: string;
-    lejarat: string;
-    kod: string;
-}
 
 export class Felhasznalo{
     nev: string;
-    szamlazasi_cim: string;
-    szallitasi_cim: string;
+    szamlazasi: string;
+    szallitasi: string;
     kuponkod: string;
-    bankkartya: Bankkartya;
+    szam: string;
+    lejarat: string;
+    kod: string;
 }
