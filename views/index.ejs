@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title><%= message %></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+    .selected{
+        border: 2px blue solid;
+        border-radius: 5px;
+    }
+
+
+</style>
+<body>
+    <main>
+        <div class="row text-center">
+            <div class="card" style="width: 18rem;">
+                <img src="img/2000 Kubota micro tracteur kubota.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">2000 Kubota micro tracteur kubota</h5>
+                  <a href="#" class="btn btn-primary">Kiválasztás</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="img/Honda.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Honda Jizz</h5>
+                  <a href="#" class="btn btn-primary">Kiválasztás</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="img/fiat.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">FIAT AUTOMOBILE</h5>
+                  <a href="#" class="btn btn-primary">Kiválasztás</a>
+                </div>
+              </div>
+        </div>
+        <form action="">
+            <label for="nev" class="">Név: </label><br>
+            <input type="text" name="nev" id=""><br>
+            <label for="cim">Számlázási cím</label><br>
+            <input type="text" name="szallitasiCim" id=""><br>
+            <label for="kuponkod">Kuponkód</label><br>
+            <input type="text" name="kuponkod" id=""><br>
+
+            <p>Bankkártya adatok:</p>
+            <label for="kartyaszam">Kártyaszám:</label><br>
+            <input type="text" name="kartyaszam" id=""><br>
+            <label for="lejarat">Lejarati dátum</label><br>
+            <input type="text" name="" id=""><br>
+            <label for="kod">Biztonsági kód</label><br>
+            <input type="text" name="kod" id=""><br>
+            
+        </form>
+    </main>
+    
+</body>
+</html>
