@@ -31,12 +31,6 @@ export class AppController {
     if(!Felhasznalo.nev||!Felhasznalo.szamlazasi||!Felhasznalo.kuponkod||!Felhasznalo.szallitasi||!Felhasznalo.lejarat||!Felhasznalo.szam||!Felhasznalo.kod){
       errors.push("Minden mezőt ki kell tölteni!")
     }
-    if(!/^Számlázási cím\s*\(Ország,\s*Irányítószám,\s*Város,\s*Utca és házszám\$/.test(Felhasznalo.szamlazasi)){
-      errors.push("számlaformat: Ország, Irányítószám, Város, Utca és házszám");
-    }
-    if(!/^Szállítási cím\s*\(Ország,\s*Irányítószám,\s*Város,\s*Utca és házszám\$/.test(Felhasznalo.szallitasi)){
-      errors.push("szállításformat: Ország, Irányítószám, Város, Utca és házszám");
-    }
     if(!/^[A-Z]{2}-\d{4}$/.test(Felhasznalo.kuponkod)){
       errors.push("kuponformat: BB-SSSS");
     }
@@ -72,7 +66,7 @@ export class AppController {
     }
     this.#Felhasznalok.push(Rendeles);
     console.log(this.#Felhasznalok);
-    //return response.('/success')
+    return response.redirect('/success')
 
   }
 
